@@ -15,5 +15,18 @@ A tool that generates production-ready Dockerfiles for any project using local L
 1. Clone the repo  
 2. Install dependencies  
 3. Point to your project folder  
-4. Generates a Dockerfile 
+4. Generates a Dockerfile
+
+## Install dependencies
+
+pip install -r requirements.txt
+
+## Run your local LLM (e.g., using Ollama)
+
+ollama run mistral
+
+
+## Generate a Dockerfile
+
+python generate_dockerfile.py
 
