@@ -30,3 +30,26 @@ ollama run mistral
 
 python generate_dockerfile.py
 
+## Example Output
+
+Generated Dockerfile:
+
+```dockerfile
+# Use the official Python 3.9 image as the base
+FROM python:3.9-slim-buster AS builder
+
+# Set the working directory in the container to /app
+WORKDIR /app
+
+# Install dependencies specified in requirements.txt
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+# Copy source code to the working directory
+COPY . .
+
+# Make port 8000 available to the world outside this container
+EXPOSE 8000
+
+# Run the command to start the development server when the container launches
+CMD ["python", "app.py"]
+```
